@@ -29,11 +29,11 @@ USER flowdroid
 WORKDIR /home/flowdroid
 
 # Download dependencies
-RUN wget -c 'http://soot-build.cs.uni-paderborn.de/nightly/soot/soot-trunk.jar' && \
+RUN wget -c 'https://soot-build.cs.uni-paderborn.de/public/origin/develop/soot/soot-develop/build/sootclasses-trunk.jar' && \
 	wget -c 'https://github.com/secure-software-engineering/soot-infoflow/releases/download/FlowDroid_1.5/soot-infoflow.jar' && \
 	wget -c 'https://github.com/secure-software-engineering/soot-infoflow-android/releases/download/FlowDroid_1.5/soot-infoflow-android.jar' && \
-	wget -c 'https://github.com/secure-software-engineering/soot-infoflow-android/raw/develop/lib/slf4j-api-1.7.5.jar' && \
-	wget -c 'https://github.com/secure-software-engineering/soot-infoflow-android/raw/develop/lib/slf4j-simple-1.7.5.jar' && \
+	wget -c 'http://central.maven.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar' && \
+	wget -c 'http://central.maven.org/maven2/org/slf4j/slf4j-simple/1.7.5/slf4j-simple-1.7.5.jar' && \
 	wget -c 'https://github.com/secure-software-engineering/soot-infoflow-android/raw/develop/lib/axml-2.0.jar' 
 
 # Download sinks, sources and callbacks
